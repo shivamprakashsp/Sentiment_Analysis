@@ -46,4 +46,4 @@ def predict():
 		ans = sentiment[np.around(best_model.predict(test), decimals=0).argmax(axis=1)[0]]
 	return render_template('index.html',rawtext=rawtext.upper(),result = ans)	
 if __name__ =='__main__':
-	app.run(debug =True)
+	app.run(debug =False)

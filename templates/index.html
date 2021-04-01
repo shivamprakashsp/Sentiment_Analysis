@@ -4,31 +4,84 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
 
 	<title>Sentiment Predictor</title>
 </head>
 <body>
-	<div>
-		<h2>Sentinment Predictor</h2>
-		<a href="{{url_for('index')}}">Refresh</a>
-	</div>
-	<div>
-		<form method="POST" action="{{url_for('predict')}}">
-			<textarea rows ="10" cols="10" name ="rawtext">
-			</textarea>
-			<button type ="reset">Clear</button>
-			<button type="submit">Submit</button>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+	  <a class="navbar-brand" href="/">Sentiment Predictor</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
 
-		</form>
+	  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+	      </li>
+	       <li class="nav-item">
+	        <a class="nav-link" href="https://github.com/shivamprakashsp/Sentiment_Analysis/blob/main/TweetsSentimentPredictions.ipynb">About</a>
+	      </li>
+
+
+	    </ul>
+	  </div>
+	</nav>
+	<br/>
+	<br/>
+	<div class="jumbotron" style="background:#0686e4;color:#fff">
+	    <div class="container">
+	      <h2 class="display-3">Sentiment Predictor</h2>
+	      <p>Using Bi-Lstm Model </p>
+	      <p><a class="btn btn-success waves-effect btn-lg" href="/" role="button">Refresh &raquo;</a></p>
+	    </div>
+	 </div>
+	<br/>
+	<div class="container md-form mb-4 pink-textarea active-pink-textarea" >
+	<form method="POST" action="/predict">
+		<textarea id="form18" rows="10" cols="10" type="text" name="rawtext" class="md-textarea form-control"></textarea>
+		<label for="form18">Enter text for sentiment prediction</label>
+		<button type="reset" class="btn btn-primary">Clear</button>
+		 <a href="#pre"><button type="submit" class="btn btn-primary">Predict</button></a>
+	</form>
 	</div>
-	<div>
-		<h2>Original Text</h2>
-		{{rawtext}}
-	</div>
-	<div>
-		<h2>Sentiment</h2>
-		{{result}}
+	
+	<div class="container" >
+		<div class="row" id ="pre">
+			<div class="col-md-6">	
+	          <div class="card mb-10 shadow-sm" id="custom_card">
+	          	<h4>Original Text</h4>
+	          	<p>{{ rawtext }}</p>
+			  </div>
+		    </div>
+			<div class="col-md-6">
+	        	<div class="card mb-10 shadow-sm" id="custom_card2">
+	          		<h4>Prediction</h4>
+					<div class="alert alert-success" role="alert"><p>{{ result }}</p></div>
+				</div>
+			</div>
+		</div>
+	<br/>
+	<br/>
+	<br/>
+
 	</div>
 
+<!-- JQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js">
+		
+	</script>
 </body>
 </html>
+
