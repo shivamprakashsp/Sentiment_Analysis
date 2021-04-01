@@ -1,4 +1,4 @@
-# Tweet_Sentiment_Analysis
+Sentiment_Analysis
 
 This project is based on the dataset available at https://www.kaggle.com/c/tweet-sentiment-extraction/overview which is composed of about 20k tweets to train sentiment predictors.
 
