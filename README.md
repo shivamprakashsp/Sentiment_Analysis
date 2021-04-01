@@ -6,19 +6,25 @@ The "TweetsSentimentPredictions.ipynb" notebook will guide you through the proce
 
 
 # Sentiment Predictor Web App (Flask)
-### Dependencies (Install the following libraries before running the app)
 
-Flask
-
-Tensorflow
-
-Keras
-
-Numpy & Pandas 
-
-### How to use
+### How to use (with Docker)
 
 Step 1 -> git clone
 
-Step 2 -> python app.py
+Step 2 -> docker build -t flaskapp .
+
+Step 3 -> docker run -p 8000:8000 flaskapp
+
+
+### Without docker (Install the following libraries before running the app)
+
+numpy==1.19.2 or later
+
+tensorflow==2.3.0 or later
+
+Keras ==2.4.3 or later
+
+Flask ==1.1.2 or later
+
+
 
