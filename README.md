@@ -9,6 +9,8 @@ The "TweetsSentimentPredictions.ipynb" notebook will guide you through the proce
 
 ### Dependencies (Install the following libraries before running the app)
 
+Flask
+
 Tensorflow
 
 Keras
