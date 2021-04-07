@@ -11,9 +11,11 @@ The "TweetsSentimentPredictions.ipynb" notebook will guide you through the proce
 
 Step 1 -> git clone
 
-Step 2 -> docker build -t flaskapp .
+Step 2-> Change the current working directory to the cloned repository's directory
 
-Step 3 -> docker run -p 8000:8000 flaskapp
+Step 3 -> docker build -t flaskapp .
+
+Step 4 -> docker run -p 8000:8000 flaskapp
 
 
 ### Without docker 
@@ -22,7 +24,7 @@ Step 1 -> git clone
 
 Step 2 -> Install the following python libraries :-
 
-numpy==1.19.2 or later
+numpy==1.19.2 or later 
 
 tensorflow==2.3.0 or later
 
@@ -30,7 +32,9 @@ Keras ==2.4.3 or later
 
 Flask ==1.1.2 or later
 
-Step 3-> python app.py
+Step 3-> Change the current working directory to the cloned repository's directory
+
+Step 4-> python app.py
 
 
 
