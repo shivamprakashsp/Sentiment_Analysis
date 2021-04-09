@@ -18,7 +18,7 @@ Step 3 -> docker build -t flaskapp .
 Step 4 -> docker run -p 8000:8000 flaskapp
 
 
-### Without docker 
+### Without docker (must have python 3.7 or above installed)
 
 Step 1 -> git clone
 
